@@ -1,0 +1,44 @@
+<%- include('partials/header') %>
+
+    <div class="landing_page">
+        <div class="nav">
+            <div class="heading">
+                <div class="clgLogo">
+                    <img src="MANIT_LOGO.png">
+                </div>
+                Health_Sympto_Care
+            </div>
+            <div class="routes">
+                <ul class="navlinks">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Contact</a></li>
+                </ul>
+            </div>
+            <div class="name">
+                please login
+            </div>
+        </div>
+        <div class="text-container">
+            <div class="moving-text">Provide your symptoms, and receive the quickest prediction about your health. <span>&nbsp;&nbsp;||&nbsp;&nbsp;||&nbsp;&nbsp;</span> Assist us in training our model. <span>&nbsp;&nbsp;||&nbsp;&nbsp;||&nbsp;&nbsp;</span> Help Us </div>
+        </div>
+        <div class="formBox">
+            <form action="/login" method="POST" class="formsiz">
+                <% if(locals.alter) { %>
+                    <div class="Green"> <%= alter %> </div>
+                <% } %>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" name="username">
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" name="password">
+                </div>
+                <button type="submit" class="btn btn-dark">Login</button>
+            </form>
+        </div>
+    </div>
+
+<%- include('partials/footer') %>
